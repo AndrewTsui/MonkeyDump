@@ -1,20 +1,16 @@
 package com.bcu.xzq;
 
-/**
- * 
- * @author xzq
- * @version 1.0
- * @since 1.1: alter singleton class 
- *
- * You can use PropertiePath.getPropertiePath() to get an object with
- * an String return value type which contains the path of system.properties
- *
- */
-
-public class PropertiePath {
+public class PropertiePath {	
+	
+	private String propertiesName = "system.properties";	//一般只会存在一个配置文件
+	
+	public PropertiePath() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getPropertiePath() {
-		String propertiesPath = getClass().getClassLoader().getResource("system.properties").getPath().replace("%20", " ");
+		String propertiesPath = getClass().getClassLoader().getResource(propertiesName).getPath().replace("%20", " ");
+		//getClass()是静态方法，因此getPropertiePath()不能设置成静态方法
 		return propertiesPath;
 	}
 }

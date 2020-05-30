@@ -1,32 +1,31 @@
 package com.bcu.xzq;
 
 import java.io.IOException;
+import java.util.concurrent.CountDownLatch;
 
-/**
- * 
- * @author xzq
- * @version 1.0
- * 
- * This is the Thread of MonkeyTest class
- * 
- */
-
-public class MonkeyTestThread extends Thread{
+public class MonkeyTestThread extends Thread{	//该线程用于执行Monkey测试
     
-    public MonkeyTestThread() {
+	private final CountDownLatch countDownLatch;
+	private int times = 0; //线程执行次数，默认不执行
+	
+    public MonkeyTestThread(CountDownLatch countDownLatch, int times) {
 		// TODO Auto-generated constructor stub
+    	this.countDownLatch = countDownLatch;
+    	this.times = times;
 	}
 
 	@Override
     public void run() {
         try {
-        	while (true) {
+        	for(int i = 0; i < times; i++) {
         		synchronized (ThreadContext.lock) {
         			if (!ThreadContext.flag) {				
         				ThreadContext.lock.wait();
         			}
+        			System.out.println("Monkey Testing...");
         			MonkeyTest.monkeyTest();
         			ThreadContext.flag = false;
+        			countDownLatch.countDown();
         			ThreadContext.lock.notify();
         		}
         	}

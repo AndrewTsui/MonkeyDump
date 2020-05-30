@@ -2,17 +2,6 @@ package com.bcu.xzq;
 
 import java.io.IOException;
 
-/**
- * 
- * @author xzq
- * @version 1.0
- * 
- * This is a singleton class
- * 
- * You can use MonkeyTest to call adb shell monkey 
- * 
- */
-
 public class MonkeyTest {
 
 	private String shellString = "";
