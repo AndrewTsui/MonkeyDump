@@ -1,0 +1,10 @@
+  ACTIVITY com.ichi2.anki/.DeckPicker 52917b3c pid=2204
+  ACTIVITY com.ichi2.anki/.DeckPicker 52917b3c pid=2204
+  ACTIVITY com.ichi2.anki/.DeckPicker 52917b3c pid=2204
+  ACTIVITY com.ichi2.anki/.DeckPicker 52917b3c pid=2204
+  ACTIVITY com.ichi2.anki/.DeckPicker 52917b3c pid=2204
+  ACTIVITY com.ichi2.anki/.DeckPicker 52917b3c pid=2204
+  ACTIVITY com.ichi2.anki/.DeckPicker 52917b3c pid=2204
+  ACTIVITY com.ichi2.anki/.DeckPicker 52917b3c pid=2204
+  ACTIVITY com.ichi2.anki/.DeckPicker 52917b3c pid=2204
+  ACTIVITY com.ichi2.anki/.DeckPicker 52917b3c pid=2204

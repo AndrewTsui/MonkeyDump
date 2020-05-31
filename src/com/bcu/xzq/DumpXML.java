@@ -31,19 +31,19 @@ public class DumpXML {	//Singleton
 		
 			Process pr = Runtime.getRuntime().exec(cmd);
 			
-			br = new BufferedReader(new InputStreamReader(pr.getInputStream()));
-		
-			String line = null;
-		
-			StringBuilder sb = new StringBuilder();
-		
-			while ((line = br.readLine()) != null) {
-		
-				sb.append(line + "\n");
-		
-			}
-		
-			System.out.println("Current Focused Activity: "+sb.toString());
+//			br = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+//		
+//			String line = null;
+//		
+//			StringBuilder sb = new StringBuilder();
+//		
+//			while ((line = br.readLine()) != null) {
+//		
+//				sb.append(line + "\n");
+//		
+//			}
+//		
+//			System.out.println("Current Focused Activity: "+sb.toString());
 			
 			pr.waitFor();
 
