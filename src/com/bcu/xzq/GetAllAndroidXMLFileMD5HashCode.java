@@ -33,11 +33,15 @@ public class GetAllAndroidXMLFileMD5HashCode {
 				
 				if(!xmlMD5List.contains(md5Hashcode32)) {
 					xmlMD5List.add(md5Hashcode32);
-				}
-				
+				}		
+									
 		        currentState = md5Hashcode32;
 		        
-		        if(lastState != null && !lastState.equals(currentState)) {
+		        if(i == 0) {
+		        	lastState = currentState;
+		        }
+		        
+		        if(!lastState.equals(currentState)) {
 		        	StatesDirvetedCondition++;
 		        	lastState = currentState;
 		        	//currentState = null;
@@ -47,6 +51,12 @@ public class GetAllAndroidXMLFileMD5HashCode {
 		}
 		System.out.println("Totally has "+xmlMD5List.size()+" different states");
 		System.out.println("Count all of conditions which could dirvet state: "+StatesDirvetedCondition);
+		
+		AppendToFile appendToFile = new AppendOutcomeToFile();
+		appendToFile.appendToFile(PropertiesContent.getPropertiesContent(new PropertiePath()), "Totally has "+xmlMD5List.size()+" different states"+"\r\n");
+		appendToFile.appendToFile(PropertiesContent.getPropertiesContent(new PropertiePath()), "Count all of conditions which could dirvet state: "+StatesDirvetedCondition+"\r\n");
+
+		
 //		GetActivitiesStatistics getActivitiesStatistics = new GetActivitiesStatistics();
 //		getActivitiesStatistics.getStatisticsConsequence();
 //		CountActivities.countActivities();
