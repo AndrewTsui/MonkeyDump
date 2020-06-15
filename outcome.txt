@@ -1,9 +1,0 @@
-Totally has 3 different states
-Count all of conditions which could dirvet state: 0
-There are 1 different activities, and they are [com.ichi2.anki/.DeckPicker]
-Totally has 2 different states
-Count all of conditions which could dirvet state: 2
-There are 1 different activities, and they are [com.ichi2.anki/.DeckPicker]
-Totally has 2 different states
-Count all of conditions which could dirvet state: 4
-There are 1 different activities, and they are [com.ichi2.anki/.DeckPicker]
