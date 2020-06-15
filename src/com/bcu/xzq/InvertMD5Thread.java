@@ -19,6 +19,7 @@ public class InvertMD5Thread extends Thread{	//该线程用于将获取的XML文件转换成32
 			countDownLatch.await();
 			System.out.println("Invert all .XMl Files to MD5 Hash Code...");
 			InvertMD5.invertMD5();
+			CountActivities.countActivities();
 		} catch (InterruptedException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

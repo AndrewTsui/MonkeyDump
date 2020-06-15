@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.security.MessageDigest;
-
+@Deprecated
 public class GetMD5HashCode {
 
 		private GetMD5HashCode() {

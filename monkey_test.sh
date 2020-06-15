@@ -8,3 +8,4 @@ export PATH=${PATH}:/usr/local/Cellar/python/3.7.7/bin
 #adb devices
 #adb shell monkey --throttle 1000 -p com.ichi2.anki -v -v -v 3 >> /Users/tsui/eclipse-workspace/MonkeyDump/MonkeyLog/log.txt
 adb shell monkey --throttle $1 -p $2 -v -v -v $3 >> $4
+echo 0
