@@ -23,10 +23,17 @@ public class MonkeyTestThread extends Thread{	//该线程用于执行Monkey测试
         				ThreadContext.lock.wait();
         			}
         			System.out.println("Monkey Testing...");
-        			MonkeyTest.monkeyTest();
-        			ThreadContext.flag = false;
-        			countDownLatch.countDown();
-        			ThreadContext.lock.notify();
+        			//MonkeyTest.monkeyTest();
+        			if(MonkeyTest.monkeyTest()!=null) {
+        				ThreadContext.flag = false;
+            			countDownLatch.countDown();
+            			ThreadContext.lock.notify();
+        			}else {
+						sleep(5000);
+					}
+        			//ThreadContext.flag = false;
+        			//countDownLatch.countDown();
+        			//ThreadContext.lock.notify();
         		}
         	}
         } catch (InterruptedException | IOException e) {
